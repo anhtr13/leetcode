@@ -4,7 +4,6 @@ impl Solution {
     fn num_multi_digit(num: &[u8], digit: u8, mut pow: usize) -> Vec<u8> {
         let d = digit - '0' as u8;
         let mut r: u8 = 0;
-        println!("{:?}", num.len() * pow);
         let mut res = Vec::<u8>::with_capacity(num.len() + pow + 1);
         while pow > 0 {
             res.push(0);
