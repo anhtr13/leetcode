@@ -1,7 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
 #[derive(PartialEq, Eq, Clone, Debug)]
-
 pub struct TreeNode {
     pub val: i32,
     pub left: Option<Rc<RefCell<TreeNode>>>,
