@@ -1,2 +1,2 @@
-leetcode solutions Go/Rust/C/C++.
+Leetcode solutions in Go/Rust/C/C++.
 
