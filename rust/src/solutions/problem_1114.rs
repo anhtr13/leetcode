@@ -6,14 +6,14 @@ pub struct Foo {
 }
 
 impl Foo {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Foo {
             count: Arc::new(Mutex::new(1)),
             cond: Condvar::new(),
         }
     }
 
-    fn first<F>(&self, print_first: F)
+    pub fn first<F>(&self, print_first: F)
     where
         F: FnOnce(),
     {
@@ -24,7 +24,7 @@ impl Foo {
         self.cond.notify_all();
     }
 
-    fn second<F>(&self, print_second: F)
+    pub fn second<F>(&self, print_second: F)
     where
         F: FnOnce(),
     {
@@ -39,7 +39,7 @@ impl Foo {
         self.cond.notify_all();
     }
 
-    fn third<F>(&self, print_third: F)
+    pub fn third<F>(&self, print_third: F)
     where
         F: FnOnce(),
     {

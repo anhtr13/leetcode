@@ -6,7 +6,7 @@ pub struct DiningPhilosophers {
 }
 
 impl DiningPhilosophers {
-    fn new() -> Self {
+    pub fn new() -> Self {
         DiningPhilosophers {
             cv: Condvar::new(),
             folks: Arc::new(Mutex::new([true; 5])),
@@ -14,7 +14,7 @@ impl DiningPhilosophers {
     }
 
     // Callbacks are like LeetCode: each used exactly once
-    fn wants_to_eat<F1, F2, F3, F4, F5>(
+    pub fn wants_to_eat<F1, F2, F3, F4, F5>(
         &self,
         philosopher: i32,
         pick_left_fork: F1,
